@@ -4,11 +4,12 @@ from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
 
-with open('email.txt', 'r') as file:
-    read_email = file.readline()
-
-with open('email.txt', 'r') as file:
-    read_code = file.readline()[1]
+#COULDN'T authenticate email with information read from file
+# with open('email.txt', 'r') as file:
+#     read_email = file.readline().strip()
+#
+# with open('email.txt', 'r') as file:
+#     read_code = file.readline()[1].strip()
 
 app = Flask(__name__)
 
@@ -17,9 +18,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = read_email
-app.config["MAIL_PASSWORD"] = read_code
-
+app.config["MAIL_USERNAME"] =  "email_address"
+app.config["MAIL_PASSWORD"] = "email app code"
 db = SQLAlchemy(app)
 
 mail = Mail(app)
