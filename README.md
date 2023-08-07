@@ -1,9 +1,8 @@
-#Job_App_Flask-Form
+Job_App_Flask-Form
+-
 
-Runs directly from PyCharm 2023.1.2
-- 
-a link is created in the console that can be copied and run 
-in the browser 
+#Runs directly from PyCharm 2023.1.2
+a link is created in the console that can be copied and run in the browser 
 
 - Python 3.10
 - Flask 2.3.2
